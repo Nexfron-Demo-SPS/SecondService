@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: SecondService
+
+  kafka:
+    consumer:
+      bootstrap-servers: 192.168.122.160:9092
+
+
+server:
+  port: 0
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+
+  instance:
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+
+
+
