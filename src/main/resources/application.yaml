@@ -2,11 +2,6 @@ spring:
   application:
     name: SecondService
 
-  kafka:
-    consumer:
-      bootstrap-servers: 192.168.122.160:9092
-
-
 server:
   port: 0
 eureka:
